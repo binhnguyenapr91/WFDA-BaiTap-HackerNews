@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>URL</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <th>{{article.id}}</th>
+            <td>{{article.title}}</td>
+            <td>{{article.url}}</td>
+            <td><input [(ngModel)]="article.title"></td>
+        </tr>
+    </tbody>
+</table>
