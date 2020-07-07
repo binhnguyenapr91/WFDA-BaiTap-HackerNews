@@ -1,16 +1,17 @@
-<table>
+<table class="table table-hover">
     <thead>
         <th>ID</th>
         <th>TITLE</th>
         <th>URL</th>
-        <th></th>
+        <th colspan="2"></th>
     </thead>
     <tbody>
         <tr *ngFor="let article of articles">
             <th>{{article.id}}</th>
             <td>{{article.title}}</td>
             <td>{{article.url}}</td>
-            <td><app-like></app-like><input [(ngModel)]="article.title"></td>
+            <td><app-like></app-like></td>
+            <td><textarea [(ngModel)]="article.title"></textarea></td>
         </tr>
     </tbody>
 </table>
