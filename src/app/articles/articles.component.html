@@ -1,17 +1,18 @@
 <table class="table table-hover">
-    <thead>
-        <th>ID</th>
-        <th>TITLE</th>
-        <th>URL</th>
-        <th colspan="2"></th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let article of articles">
-            <th>{{article.id}}</th>
-            <td>{{article.title}}</td>
-            <td>{{article.url}}</td>
-            <td><app-like></app-like></td>
-            <td><textarea [(ngModel)]="article.title"></textarea></td>
-        </tr>
-    </tbody>
+  <thead>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>URL</th>
+    <th colspan="2"></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let article of articles" (click)="onSelected(article)">
+      <th>{{ article.id }}</th>
+      <td>{{ article.title }}</td>
+      <td>{{ article.url }}</td>
+      <td><app-like></app-like></td>
+      <td><textarea [(ngModel)]="article.title"></textarea></td>
+    </tr>
+  </tbody>
 </table>
+<app-article-detail [article]="selectedArticle"></app-article-detail>

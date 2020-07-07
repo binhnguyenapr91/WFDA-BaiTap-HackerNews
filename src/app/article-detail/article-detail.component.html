@@ -1,1 +1,18 @@
-
+<div *ngIf="article">
+    <hr />
+    <h2>{{article.id}} <small>Details</small></h2>
+    <table>
+       <tr>
+           <td>ID</td>
+           <td>{{article.id}}</td>
+       </tr>
+       <tr>
+          <td>TITLE</td>
+          <td>{{article.title}}</td>
+      </tr>   
+      <tr>
+          <td>URL</td>
+          <td>{{article.url}}</td>
+      </tr>      
+    </table>
+  </div>
