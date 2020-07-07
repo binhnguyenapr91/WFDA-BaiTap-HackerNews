@@ -7,13 +7,12 @@
     <th colspan="1"></th>
   </thead>
   <tbody>
-    <tr *ngFor="let article of articles" (click)="onSelected(article)">
+    <tr *ngFor="let article of articles">
       <th>{{ article.id }}</th>
-      <td>{{ article.title }}</td>
+      <td><a routerLink="/detail/{{article.id}}">{{ article.title }}</a></td>
       <td><img src="{{article.image}}" alt="" style="width: 300px; height: 200px;"></td>
       <td>{{ article.url }}</td>
       <td><app-like></app-like></td>
     </tr>
   </tbody>
 </table>
-<app-article-detail [article]="selectedArticle"></app-article-detail>

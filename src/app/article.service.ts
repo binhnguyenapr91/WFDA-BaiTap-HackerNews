@@ -13,5 +13,9 @@ export class ArticleService {
     this.messageService.addMessage("Article Service: fetched all articles");
     return of(Articles);
   }
+  getArticle(id:number): Observable<Article>{
+    this.messageService.addMessage(`Article Service: fetch article has id=${id}`);
+    return of(Articles.find(article =>article.id = id))
+  }
   constructor(private messageService : MessageService) { }
 }

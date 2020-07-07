@@ -19,8 +19,8 @@
           <td>{{article.url}}</td>
       </tr>      
       <tr>
-          <td colspan="2"><textarea [(ngModel)]="article.title"></textarea></td>
-          
+          <td><textarea [(ngModel)]="article.title"></textarea></td>
+          <td><button class="btn btn-primary"(click)="goBack()">Go Back</button></td>
       </tr>
     </table>
   </div>
