@@ -1,7 +1,7 @@
 <div *ngIf="article">
     <hr />
     <h2>{{article.id}} <small>Details</small></h2>
-    <table>
+    <table class="table table-hover">
        <tr>
            <td>ID</td>
            <td>{{article.id}}</td>
@@ -11,8 +11,15 @@
           <td>{{article.title}}</td>
       </tr>   
       <tr>
+          <td>IMAGE</td>
+          <td><img src="{{article.image}}" alt="" style="width: 300px; height: 200px;"></td>
+      </tr>
+      <tr>
           <td>URL</td>
           <td>{{article.url}}</td>
       </tr>      
+      <tr>
+          <td colspan="2"><textarea [(ngModel)]="article.title"></textarea></td>
+      </tr>
     </table>
   </div>
