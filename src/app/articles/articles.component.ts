@@ -1,4 +1,3 @@
-import { Article } from './../article';
 import { Component, OnInit } from '@angular/core';
 import {Articles} from './../mock-articles'
 @Component({
@@ -8,9 +7,8 @@ import {Articles} from './../mock-articles'
 })
 export class ArticlesComponent implements OnInit {
   articles = Articles;
-  
-  constructor() { }
 
+  constructor() { }
   
   ngOnInit(): void {
   }

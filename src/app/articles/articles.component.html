@@ -10,7 +10,7 @@
             <th>{{article.id}}</th>
             <td>{{article.title}}</td>
             <td>{{article.url}}</td>
-            <td><input [(ngModel)]="article.title"></td>
+            <td><app-like></app-like><input [(ngModel)]="article.title"></td>
         </tr>
     </tbody>
 </table>
