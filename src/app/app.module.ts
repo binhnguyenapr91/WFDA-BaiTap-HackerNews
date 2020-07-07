@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { LikeComponent } from './like/like.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
     ArticleDetailComponent,
-    LikeComponent
+    LikeComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
